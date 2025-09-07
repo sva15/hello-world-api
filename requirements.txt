@@ -1,5 +1,6 @@
-fastapi==0.104.1
-uvicorn==0.24.0
-pytest==7.4.3
-ruff==0.1.6
-bandit==1.7.5
+fastapi
+uvicorn
+pytest
+ruff
+bandit
+mypy
