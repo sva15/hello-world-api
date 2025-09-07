@@ -1,7 +1,9 @@
 fastapi
 uvicorn
 pytest
+pytest-cov
 ruff
 bandit
 mypy
-pytest-cov
+httpx
+python-multipart
