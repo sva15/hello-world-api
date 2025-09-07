@@ -4,3 +4,4 @@ pytest
 ruff
 bandit
 mypy
+pytest-cov
