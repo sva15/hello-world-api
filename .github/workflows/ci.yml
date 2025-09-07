@@ -228,7 +228,7 @@ jobs:
       id: deps-scan
       uses: pypa/gh-action-pip-audit@v1.1.0
       with:
-        inputs: requirements.txt requirements-dev.txt
+        inputs: requirements.txt
 
     # - name: SAST Security Scan (Action)
     #   id: sast-scan-action
