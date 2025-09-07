@@ -9,7 +9,7 @@ on:
 jobs:
   call-reusable-workflow:
     name: Python DevSecOps Pipeline
-    uses: sva15/reusable-workflows/.github/workflows/ci.yml@main
+    uses: sva15/reusable-workflows/.github/workflows/python-devsecops.yml@main
     with:
       python-version: '3.11'
       coverage-threshold: '90'
