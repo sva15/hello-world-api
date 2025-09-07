@@ -261,7 +261,6 @@ jobs:
       uses: SonarSource/sonarqube-scan-action@v5.3.1
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      
 
   pr-comment:
     name: PR Comment with Results
