@@ -3,7 +3,7 @@ name: Task Management API - DevSecOps Pipeline
 
 on:
   push:
-    branches: [ "feature/**", "develop" ]  # Only feature branches and develop
+    branches: [ "feature/**", "develop", "main" ]
   pull_request:
     branches: [ "main", "develop" ]
 
