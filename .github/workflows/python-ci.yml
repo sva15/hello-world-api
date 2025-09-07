@@ -1,0 +1,22 @@
+name: Project CI Pipeline
+
+on:
+  push:
+    branches: [ "feature/**", "develop", "main" ]
+  pull_request:
+    branches: [ "main", "develop" ]
+
+jobs:
+  call-reusable-workflow:
+    name: Python DevSecOps Pipeline
+    uses: your-org/reusable-workflows/.github/workflows/ci.yml@main
+    with:
+      python-version: '3.11'
+      coverage-threshold: '90'
+      requirements-file: 'requirements.txt'
+      source-directory: 'src'
+      test-directory: 'tests'
+      enable-sonarqube: ${{ github.event_name == 'pull_request' && github.base_ref == 'main' || github.ref == 'refs/heads/main' }}
+      enable-pr-comments: true
+    secrets:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
