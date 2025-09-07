@@ -18,5 +18,11 @@ jobs:
       test-directory: 'tests'
       enable-sonarqube: ${{ github.event_name == 'pull_request' && github.base_ref == 'main' || github.ref == 'refs/heads/main' }}
       enable-pr-comments: true
+    permissions:
+      checks: write
+      security-events: write
+      actions: read
+      contents: read
+      pull-requests: write  
     secrets:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
